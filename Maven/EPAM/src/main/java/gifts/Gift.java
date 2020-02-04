@@ -10,7 +10,7 @@ public class Gift{
     }
 
     public int getWeight(){
-
+        sortGifts();
         int totalWeight=0;
 
         for(int i=0;i<gifts.size();i++)
@@ -23,8 +23,13 @@ public class Gift{
         gifts.add(s);
     }
 
+    public void sortGifts(){
+        Collections.sort(gifts);
+    }
+
     public String toString(){
         StringBuilder sb=new StringBuilder();
+
 
         for(int i=0;i<gifts.size();i++) {
             sb.append(gifts.get(i).getName());
